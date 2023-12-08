@@ -1,3 +1,5 @@
+@extends('layouts.site')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
 <div class="container">
         <div class="col-12" id="color-sugerencias">
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(156, 135, 133);">
-        <a class="navbar-brand" href="welcome.blade.php"><bl>TenIt's</a>
+        <a class="navbar-brand" href="#"><bl>TenIt's</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,8 +27,16 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Iniciar Sesión</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('tenits.index')}}">Agregar Tenis</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Top!
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Nike</a>
+                <a class="dropdown-item" href="#">Adidas</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Pumas</a>
+              </div>
             </li>
           </ul>
           
@@ -308,3 +318,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
+  
+    @endsection
